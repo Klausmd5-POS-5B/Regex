@@ -1,0 +1,19 @@
+using System.Collections.Generic;
+using System.Threading.Tasks;
+
+namespace DepartmentsContract;
+
+public interface IDepartmentServerToClient
+{
+    Task SkillsOfEmployeeChanged(int employeeId, List<EmployeeSkillDto> skills);
+    Task DepartmentTeamChanged(int departmentId, List<DepartmentEmployeeDto> employees);
+    Task EmployeeHasChangedDepartment(int employeeId, int departmentId);
+    Task NewSkillAdded(SkillDto skillDto);
+    Task NewDepartmentAdded(DepartmentDto departmentDto);
+    Task NewEmployeeAdded(EmployeeDto employeeDto);
+}
+
+public interface IDepartmentClientToServer
+{
+    Task NewSkillForEmployee(int employeeId, int skillId);
+}

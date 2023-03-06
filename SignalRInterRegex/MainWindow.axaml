@@ -5,5 +5,9 @@
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
         x:Class="SignalRInterRegex.MainWindow"
         Title="SignalRInterRegex">
-    Welcome to Avalonia!
+        <StackPanel Orientation="Vertical" HorizontalAlignment="Stretch">
+                <TextBox Name="TxtIn" AcceptsReturn="True" AcceptsTab="True" Height="200"></TextBox>
+                <Button Click="Button_OnClick" Content="Parse" HorizontalAlignment="Stretch" HorizontalContentAlignment="Center"></Button>
+                <TextBox Name="TxtOut" Height="200"></TextBox>
+        </StackPanel>
 </Window>

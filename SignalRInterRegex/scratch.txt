@@ -1,6 +1,3 @@
-using System.Collections.Generic;
-using System.Threading.Tasks;
-
 namespace DepartmentsContract;
 
 public interface IDepartmentServerToClient
@@ -15,5 +12,6 @@ public interface IDepartmentServerToClient
 
 public interface IDepartmentClientToServer
 {
+    Task EmployeeWillChangeDepartment(int employeeId, int departmentId);
     Task NewSkillForEmployee(int employeeId, int skillId);
 }
